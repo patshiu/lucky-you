@@ -1,0 +1,74 @@
+
+/* css from Ben Szabo's codepen Pure CSS Magic 8 Ball demo:
+https://codepen.io/finnhvman/pen/wrLPJz */
+
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: cyan;
+  background-image: url("../images/sky.gif");
+}
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-title {
+}
+
+#go-button {
+  font-size: 2.5rem;
+  background-color: red;
+  border: inset 10px red;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  color: white;
+}
+#go-button:hover, .go-button:focus {
+  box-shadow: 0 0 1rem red;
+  border: inset 10px red;
+}
+
+#go-button:active {
+  background-color: darkRed;
+}
+
+.names-list {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+.names-list li{
+  font-size: 1rem;
+  color: black;
+}
+
+@keyframes schwing {
+  from {
+    opacity: 0.1;
+    background-color: magenta;
+    transform: scale(0.5);
+
+  }
+  to {
+    opacity: 1.0;
+    background-color: yellow;
+    transform: scale(1.0);
+  }
+}
+
+li.selected{
+  font-size: 2rem;
+  color: magenta;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 1.5rem;
+  margin: 1.5rem;
+  border-radius: 1rem;
+  border: 10px solid blue;
+
+  /* ANIMATION PARAMS */
+  animation-name: schwing;
+  animation-duration: 0.6s;
+}
